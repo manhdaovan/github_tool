@@ -15,7 +15,7 @@ and it should be automatically done by a command!
 * Ruby has been installed on your machine already.
 * Clone this repo: `$git clone https://github.com/manhdaovan/github_tool.git`
 * Install dependent gem: `$gem install bundle && bundle install`
-* Copy `.env.example` file to `.env`: `cp .env.example .env`
+* Copy `.env.example` file to `.env`: `$cp .env.example .env`
 * Fill necessary infomation into `.env` file. It's done.
 
 ### Usage
