@@ -5,17 +5,17 @@ Simple github tool for daily working on add comment to issue and move card to co
 
 After each time you fix an issue, you usually do the following steps:
 
-・Comment to fixed issue that you've fixed it.
-・Move this issue's card to Need Confirmation column
+* Comment to fixed issue that you've fixed it.
+* Move this issue's card to Need Confirmation column
 
 and you can automatically do this by a command.
 
 ### Install
 
-・Clone this repo
-・Install gem: `$gem install bundle && bundle install`
-・Copy `.env.example` file to `.env`: `cp .env.example .env`
-・Fill necessary infomation into `.env` file. It's done.
+* Clone this repo
+* Install gem: `$gem install bundle && bundle install`
+* Copy `.env.example` file to `.env`: `cp .env.example .env`
+* Fill necessary infomation into `.env` file. It's done.
 
 ### Usage
 
