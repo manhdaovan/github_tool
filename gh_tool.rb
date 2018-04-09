@@ -1,3 +1,6 @@
+require 'octokit'
+require 'dotenv/load'
+
 class GhTool
   def initialize
     @gh = Octokit::Client.new(login: ENV['GH_USERNAME'],

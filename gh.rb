@@ -1,5 +1,3 @@
-require 'octokit'
-require 'dotenv/load'
 require_relative 'cmd_utils'
 require_relative 'gh_tool'
 
