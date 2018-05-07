@@ -21,8 +21,12 @@ and it should be automatically done by a command!
 ### Usage
 
 ```
-$/path/to/ruby /path/to/gh.rb issue_id1 [issue_id2 ...] [comment]
-
-Eg:    $ruby gh.rb 1498 1750 1321 1678 507 1645 1135
-Or:    $ruby gh.rb 1498 1750 1321 1678 507 1645 1135 "This is a comment content"
+Usage: $ruby /path/to/gh.rb cmd issue_id1 [issue_id2 ...] [comment content]
+cmd:
+     comment: Comment into given issue(s)
+     move:    Move given issue(s) from GH_COLUMN_SOURCE to GH_COLUMN_TARGET
+     comment_and_move: Combination of comment and move commands
+     info:    Get given issue(s) link(s) and title(s)
+Eg:    $ruby gh.rb move 1498 1750 1321 1678 507 1645 1135
+Or:    $ruby gh.rb comment 1498 1750 1321 1678 507 1645 1135 "This is a comment content"
 ```
