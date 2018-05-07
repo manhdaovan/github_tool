@@ -13,6 +13,25 @@ class GhTool
     }
   end
 
+  def comment(comment = '対応しました。ご確認お願いします。', *issue_ids)
+    add_comment_to_issues(comment, *issue_ids)
+  end
+
+  def move(*issue_ids)
+    move_cards(*issue_ids)
+  end
+
+  def info(*issue_ids)
+    fetch_issue_info(*issue_ids)
+  end
+
+  def comment_and_move(comment = '対応しました。ご確認お願いします。', *issue_ids)
+    add_comment_to_issues(comment, *issue_ids)
+    move_cards(*issue_ids)
+  end
+
+  private
+
   def fetch_project
     projects = @gh.projects(@info[:repo])
     projects.find { |prj| prj[:name] == @info[:project_name] }
@@ -52,6 +71,14 @@ class GhTool
     my_cards.each do |card|
       @gh.move_project_card(card[:id], 'top', column_id: target_column_id)
       puts "Moved card: #{card[:content_url]}"
+    end
+  end
+
+  def fetch_issue_info(*issue_ids)
+    issue_ids.each do |issue_id|
+      issue = @gh.issue(@info[:repo], issue_id)
+      puts "・#{issue[:title]}"
+      puts (issue[:html_url]).to_s
     end
   end
 end
